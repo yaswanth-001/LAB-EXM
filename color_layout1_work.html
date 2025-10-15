@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Sample Layout 1</title>
+<style>
+
+
+  .page {
+    /*we cannot use box because box is individual layout but box is complete layout */
+    display: grid;
+    grid-template-columns: 2fr 2fr 3fr;           /* left, middle, right */
+    grid-template-rows: 50px 70px 420px;          /* header, search, content */
+    grid-template-areas:
+      "header header header"
+      "search search right"
+      "left   middle right";
+    
+               /* gap: 10px;*/ /*we can create spaces for each box like margin only work for complete layout-->*/
+  }
+/*padding is names written in box with gap*/
+ .box { padding: 10px; font-size: 12px;margin: 2px; }
+        /*margin is like gap but the differ is gap(coplete layout) give space inside from outside and margin give outside only */
+
+  .header { grid-area: header; background: pink; }
+  .search { grid-area: search; background: aqua; }
+  .left   { grid-area: left;   background: blue; }
+  .middle { grid-area: middle; background: yellow; }
+  .right  { grid-area: right;  background: green; }
+
+  /*this media for mobile phones not for pc*/
+  @media (max-width: 800px) {
+    .page {
+       /*we cannot use box because box is individual layout but box is complete layout */
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 60px auto auto auto;
+      grid-template-areas:
+        "header"
+        "search"
+        "right"
+        "left"
+        "middle";
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+    
+    <div class="box header">HEADER</div>
+    <div class="box search">SEARCH</div>
+    <div class="box left">LEFT SIDE BAR</div>
+    <div class="box middle">MIDDLE</div>
+    <div class="box right">RIGHT SIDE BAR</div>
+  </div>
+</body>
+</html>

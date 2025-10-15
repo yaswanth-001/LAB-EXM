@@ -1,0 +1,27 @@
+body{
+    background-color: antiquewhite;
+}
+body{
+  color: green;
+}
+.ok{
+        overflow: hidden;
+        display: flex;
+        justify-content: flex-start;
+            padding: 0px;         
+}
+.ok :hover{
+  color:   red;
+  background-color: black; 
+}
+nav{
+  background-color: aqua;
+  padding: 16px 32px;
+}
+nav a{
+  margin-right: 10px;
+}
+nav a.active{
+  text-decoration: none;
+  color:chocolate
+}

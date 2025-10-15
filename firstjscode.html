@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        x=100;
+        var y=200;
+        let a=300;
+        const b=400;
+        {
+        x=1000;
+        var y=2000;
+        let a=3000;
+        const b=4000;
+        a=5000; 
+       // b=7000;  /* this shows the error because we cannot update the value*/
+      console.log("value of x in this block :" + x);        
+      console.log("value of y in this block :" + y);
+      console.log("value of a in this block :" + a); 
+      console.log("value of b in this block :" + b);
+        }
+      console.log("value of x :" + x);        
+      console.log("value of y :" + y);
+      console.log("value of a :" + a); 
+      console.log("value of b :" + b);
+
+ 
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

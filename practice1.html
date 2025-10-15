@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Positive Numbers Callback</title>
+</head>
+<body>
+<h2>Positive Numbers from Array:</h2>
+<p id="demo"></p>
+<script>
+const arr1 = [12, -5, 0, 33, -17, 8, 19, -2, 7, -11];
+
+function getPositiveNumbers(array, callback) {
+    const result = [];
+    for (const num of array) {
+        if (callback(num)) result.push(num);
+    }
+    return result;
+}
+
+const positive = getPositiveNumbers(arr1, x => x > 0);
+document.getElementById("demo").textContent = positive.join(", ");
+</script>
+</body>
+</html>
