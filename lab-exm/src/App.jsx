@@ -4,7 +4,7 @@ import BookingForm from "./BookingForm";
 function App() {
   return (
     <div>
-      <h1>Little Lemon Booking App</h1>
+      <h1>Little Lemon    Booking App</h1>
       <BookingForm />
     </div>
   );
